@@ -1,9 +1,16 @@
+
 import React from 'react';
 // import logo from './logo.svg';
 import L from 'leaflet';
 // import './App.css';
 
+  var style = {
+    height:'300px',
+    width:'100%'
+  };
+
 class App extends React.Component {
+
   componentDidMount() {
     // create map
     this.map = L.map('map', {
@@ -18,9 +25,8 @@ class App extends React.Component {
   }
 
   render() {
-    return <div id="map"></div>
+    return <div id="map" style={style}></div>
   }
 }
 
 export default App;
-
