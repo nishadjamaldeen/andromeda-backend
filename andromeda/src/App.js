@@ -7,14 +7,16 @@ class App extends React.Component {
   componentDidMount() {
     // create map
     this.map = L.map('map', {
-      center: [50, 12],
-      zoom: 8,
+      // center: [37.983, -121.869],
+      center: [51.505, -0.09],
+      zoom: 14,
       layers: [
         L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-          attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+          attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors, '
         }),
       ]
     });
+    var marker = L.marker([51.5, -0.09]).addTo(this.map);
   }
 
   render() {
