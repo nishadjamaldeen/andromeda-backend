@@ -1,6 +1,3 @@
-(function(){
-    'use strict'
-
 var mongoose = require('mongoose');
 var schema = mognoose.Schema();
 
@@ -19,5 +16,5 @@ var SprayHeadSchema = new schema({
         default: Date.now
     },
     imei: String
-});
+
 });
