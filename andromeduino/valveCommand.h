@@ -7,7 +7,6 @@ class valveCommand {
     public:
 
     valveCommand(int valvePin);
-    void init();
     void setDelay(int delayMillis);
     int getResponse();
     void actuate();
@@ -17,6 +16,7 @@ class valveCommand {
     char _in;
     int _remoteResponse;
     int _actuateCommand;
+    void init();
 };
 
 #endif
