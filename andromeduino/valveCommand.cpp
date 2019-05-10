@@ -11,6 +11,7 @@ valveCommand::init(){
     pinMode(LED_BUILTIN, OUTPUT);
     Serial.begin(9600);
     _actuateCommand = "1";
+    _stopCommand = "0";
 }
 
 void valveCommand::setDelay(int delayMillis){
@@ -31,4 +32,8 @@ int valveCommand::getResponse(){
 
 void valveCommand::actuate(){
     Serial.println(_actuateCommand);
+    delay(_delay);
+    Serial.println(_stopCommand);
+    delay(_delay);
+
 }
