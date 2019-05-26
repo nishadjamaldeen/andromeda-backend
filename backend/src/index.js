@@ -1,15 +1,25 @@
+// Include all dependencies
 const express = require('express');
-const app = express();
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const mongoose = require('mongoose');
+const morgan = require('morgan')
 
-var api = require('./routes/api.js');
 
+
+// Initiate app functions
+var app = express();
 app.use(cors());
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(morgan('combined'));
+var routes = require('./routes/index.js');
+
+app.use('/api', routes);
 
 
+
+// Include database and initialize
 var mongooseURI = "mongodb+srv://admin:admin@andromeda-test-may-dhacq.mongodb.net/test?retryWrites=true";
 mongoose.connect(mongooseURI, { useNewUrlParser: true });
 const connection = mongoose.connection;
@@ -20,8 +30,9 @@ connection.once('open', function(){
 });
 
 
+// Run application 
 var port = process.env.port || 3030;
-
 app.listen(port, function(){
     console.log("App is listening on port: " + port);
 });
+
