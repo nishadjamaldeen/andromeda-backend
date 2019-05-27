@@ -1,8 +1,12 @@
 const mongoose = require('mongoose');
 
 var SprayHeadSchema = new mongoose.Schema({
-    latitude: String,
-    longitude: String,
+    // _id: {
+    //     type: mongoose.SchemaTypes.ObjectId,
+    //     required: true
+    // },
+    latitude: Number,
+    longitude: Number,
     state: {
         type: Boolean,
         default: false

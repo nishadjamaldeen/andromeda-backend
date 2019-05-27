@@ -3,8 +3,13 @@ const sprayheadController = require('../controllers/sprayheadController.js');
 var express = require('express');
 var router = express.Router();
 
-router.get('/sprayheads', sprayheadController.getSprayheads);
+router.get('/', function(req, res){
+    res.send("It works!");
+})
+
+router.get('/sprayheads/', sprayheadController.getSprayheads);
 router.get('/sprayheads/:id', sprayheadController.getById);
+router.get('/sprayheads/lat/:lat', sprayheadController.getByLat);
 router.post('/sprayheads', sprayheadController.add);
 
 module.exports = router;
