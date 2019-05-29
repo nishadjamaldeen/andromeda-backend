@@ -10,7 +10,7 @@ router.get('/', function(req, res){
 router.get('/sprayheads/', sprayheadController.getSprayheads);
 router.get('/sprayheads/:id', sprayheadController.getById);
 router.get('/sprayheads/lat/:lat', sprayheadController.getByLat);
-router.post('/sprayheads', sprayheadController.add);
+router.post('/sprayheads/', sprayheadController.add);
 
 module.exports = router;
 // const routes = [

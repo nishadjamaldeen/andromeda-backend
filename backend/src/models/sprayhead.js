@@ -1,22 +1,13 @@
+
+
 const mongoose = require('mongoose');
 
 var SprayHeadSchema = new mongoose.Schema({
-    // _id: {
-    //     type: mongoose.SchemaTypes.ObjectId,
-    //     required: true
-    // },
-    latitude: Number,
-    longitude: Number,
-    state: {
-        type: Boolean,
-        default: false
-    },
-    created: {
-        type: Date,
-        default: Date.now
-    },
-    imei: String
-
+    latitude: { type: Number },
+    longitude: { type: Number },
+    state: { type: Boolean, default: false },
+    created: { type: Date, default: Date.now },
+    node_id: { type: String }
 });
 
 module.exports = mongoose.model('Sprayhead', SprayHeadSchema);
