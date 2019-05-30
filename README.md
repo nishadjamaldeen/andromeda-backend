@@ -11,7 +11,7 @@ npm init
 node backend/src/index.js
 ```
 
-For development, naviagte to `backend/src/` and utilize `nodemon` (can be installed via `npm install nodemon` - more information available at https://nodemon.io/).
+For development, navigate to `backend/src/` and utilize `nodemon` (can be installed via `npm install nodemon` - more information available at https://nodemon.io/). The `packages.json` also outlines the currently compatible versions of the modules required, as well as the latest version of node.js - which can be downloaded from https://nodejs.org/en/.
 
 ### File directory
 ```
@@ -77,9 +77,9 @@ with the post body in JSON format
 
 ```json
 {
-     "lat": <lat-string>,
-     "long": <long-string>,
-     "nodeid": <device-based ID>
+     "lat": "<lat-string>",
+     "long": "<long-string>",
+     "nodeid": "<device-based ID>"
 }
 ```
 
