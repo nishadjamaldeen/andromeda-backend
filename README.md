@@ -13,7 +13,7 @@
 This repository provides backend endpoints, services and data handling for the Andromeda project - a series of IoT enabled devices delivering smart irrigation and agriculture to farms. The server currently exists on `Heroku` at `morning-fjord-65576.herokuapp.com` and will be referred to as **andromeda-host**. 
 
 ### Installation & Running 
-Once in the root directory, run the following commands to install the modules encased in the `packages.json` file and running the server:
+If you would like to perform testing on your local machine, download the [Andromeda Alpha One Release](https://github.com/nishadjamaldeen/andromeda-backend/releases/tag/0.1.0). Once in the root directory, run the following commands to install the modules encased in the `packages.json` file and running the server:
 
 ``` bash
 npm init
