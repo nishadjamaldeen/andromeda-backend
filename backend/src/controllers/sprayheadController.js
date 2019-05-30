@@ -5,9 +5,9 @@ var Sprayhead = require('../models/sprayhead.js');
 
 var ObjectId = mongoose.Types.ObjectId;
 
+// GET all Sprayheads
 module.exports.getSprayheads = function(req, res){
-    console.log("error here");
-    sprayhead.find({}, function(err, results){
+    Sprayhead.find({}, function(err, results){
         if (err){    
             console.log(err);
             return res.status(500).send(err);
@@ -16,6 +16,8 @@ module.exports.getSprayheads = function(req, res){
     });
 };
 
+
+// GET Sprayhead by Node ID
 module.exports.getByNodeID = function(req, res){
     Sprayhead.find({"node_id": {$eq : req.params.nodeid}}, function(err, sprayhead){
         if (err) return res.status(500).send(err);
@@ -23,6 +25,8 @@ module.exports.getByNodeID = function(req, res){
     })
 }
 
+
+// GET Sprayhead by DB ID - purely for testing purposes and not intended 
 module.exports.getById = function(req, res){
     try{
         var spray = sprayhead.findById(ObjectId(req.params.id)).exec();
@@ -52,3 +56,4 @@ module.exports.add = function(req, res){
         res.send("Added successfully");
     });
 }
+
