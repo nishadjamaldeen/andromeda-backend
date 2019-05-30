@@ -1,5 +1,5 @@
-[![npm](https://badge.fury.io/js/npm.svg)](https://badge.fury.io/js/npm)
-[![node](https://badge.fury.io/js/node.svg)](https://badge.fury.io/js/node)
+[!npm(https://badge.fury.io/js/npm.svg)](https://badge.fury.io/js/npm)
+[!node(https://badge.fury.io/js/node.svg)](https://badge.fury.io/js/node)
 
 # Andromeda Backend Server
 
