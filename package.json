@@ -1,7 +1,7 @@
 {
-  "name": "andromeda",
+  "name": "andromeda-backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "\"andromeda-backend\"",
   "main": "backend/src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -16,6 +16,24 @@
     "express": "^4.16.2",
     "fastify": "^2.4.1",
     "mongoose": "5.5.11",
+    "npm": "^6.9.0",
     "router": "^1.1.3"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nishadjamaldeen/andromeda-backend.git"
+  },
+  "keywords": [
+    "heroku",
+    "node"
+  ],
+  "bugs": {
+    "url": "https://github.com/nishadjamaldeen/andromeda-backend/issues"
+  },
+  "homepage": "https://github.com/nishadjamaldeen/andromeda-backend#readme",
+  "engines": {
+    "node":"10.16.0",
+    "npm":"6.9.0"
   }
 }

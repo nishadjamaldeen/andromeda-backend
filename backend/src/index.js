@@ -19,6 +19,9 @@ app.use(morgan('combined'));
 var routes = require('./routes/api.js');
 
 app.use('/api', routes);
+app.use('/', function(req, res){
+    return res.send("Andromeda Backend Server v3");
+})
 
 
 const MongoClient = require('mongodb').MongoClient;
