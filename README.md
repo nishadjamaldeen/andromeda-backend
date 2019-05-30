@@ -1,4 +1,4 @@
-[![10.16.0](https://img.shields.io/node/v/node.svg?style=flat)](http://nodejs.org/download/)
+[![10.16.0](https://img.shields.io/node/v/npm.svg?style=flat)](http://nodejs.org/download/)
 
 # Andromeda Backend Server
 
