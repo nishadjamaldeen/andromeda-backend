@@ -1,4 +1,5 @@
-[![10.16.0](https://img.shields.io/node/v/npm.svg?style=flat)](http://nodejs.org/download/)
+[![npm version](https://badge.fury.io/js/npm.svg)](https://badge.fury.io/js/npm)
+[![npm version](https://badge.fury.io/js/node.svg)](https://badge.fury.io/js/node)
 
 # Andromeda Backend Server
 
