@@ -14,30 +14,22 @@ node backend/src/index.js
 For development, naviagte to `backend/src/` and utilize `nodemon` (can be installed via `npm install nodemon` - more information available at https://nodemon.io/).
 
 ### File directory
-
+```
 Andromeda Backend
 |
 +-- backend
-|  |
 |  +-- src
-|  |  |
-|  |  +-- controllers
-|  |  |  |
-|  |  |  +-- sprayheadControllers.js
-|  |  |
-|  |  +-- models
-|  |  |  |
-|  |  |  +-- sprayhead.js
-|  |  |
-|  |  +-- routes
-|  |  |  |
-|  |  |  +-- api.js
-|  |  |
-|  |  +-- index.js
-|
+|    +-- controllers
+|      +-- sprayheadControllers.js
+|    +-- models
+|      +-- sprayhead.js
+|    +-- routes
+|      +-- api.js
+|    +-- index.js
 +-- package.json
 |
 +-- README.md
+```
 
 ## Endpoints
 
