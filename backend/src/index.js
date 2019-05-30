@@ -3,7 +3,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const mongoose = require('mongoose');
-const morgan = require('morgan');
+// const morgan = require('morgan');
 
 
 // Initiate app functions
@@ -13,7 +13,7 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(morgan('combined'));
+// app.use(morgan('combined'));
 
 
 var routes = require('./routes/api.js');
