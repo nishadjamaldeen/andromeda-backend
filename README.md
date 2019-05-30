@@ -1,4 +1,4 @@
-[![Node version](https://img.shields.io/node/v/[NPM-MODULE-NAME].svg?style=flat)](http://nodejs.org/download/)
+[![Node version](https://img.shields.io/node/v/npm.svg?style=flat)](http://nodejs.org/download/)
 
 # Andromeda Backend Server
 
