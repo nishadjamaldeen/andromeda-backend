@@ -6,9 +6,9 @@ var Sprayhead = require('../models/sprayhead.js');
 var ObjectId = mongoose.Types.ObjectId;
 
 module.exports.getSprayheads = function(req, res){
-    console.log("error here");
-    sprayhead.find({}, function(err, results){
-        if (err){    
+    // console.log("error here");
+    Sprayhead.find({}, function(err, results){
+        if (err){
             console.log(err);
             return res.status(500).send(err);
         }
@@ -17,15 +17,27 @@ module.exports.getSprayheads = function(req, res){
 };
 
 module.exports.getByNodeID = function(req, res){
-    Sprayhead.find({"node_id": {$eq : req.params.nodeid}}, function(err, sprayhead){
-        if (err) return res.status(500).send(err);
+    // Sprayhead.find({"node_id": {$eq : req.params.nodeid}}, function(err, sprayhead){
+    //     if (err) {
+    //       console.log(err);
+    //       return res.status(500).send(err);
+    //     }
+    //     // console.log(sprayhead);
+    //     return res.json(sprayhead);
+    // })
+    Sprayhead.find({node_id: req.params.id}, function(err, sprayhead){
+        if (err) {
+          console.log(err);
+          return res.status(500).send(err);
+        }
+        console.log(sprayhead);
         return res.json(sprayhead);
     })
 }
 
 module.exports.getById = function(req, res){
     try{
-        var spray = sprayhead.findById(ObjectId(req.params.id)).exec();
+        var spray = Sprayhead.findById(ObjectId(req.params.id)).exec();
         res.json(spray);
     } catch (error){
         res.status(500).send(error);
