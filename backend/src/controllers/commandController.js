@@ -19,7 +19,7 @@ module.exports.getCommands = function(req, res){
     /* For buffering */
     /*
     getLatestDevices
-    
+
     */
 };
 
@@ -34,11 +34,14 @@ module.exports.update = function(req, res){
 }
 
 // ADD commands to table
+// Handles the request once received at database
 module.exports.add = function(req, res){
     let command = new Command({
         "type": req.body.type,
         "scheduledFor": req.body.scheduledFor,
-        "target_id": req.body.target_id
+        "target_id": req.body.target_id,
+        "command_id": req.body.command_id,
+        "downloaded": req.body.downloaded
     });
 
     command.save(function (error){
