@@ -20,9 +20,8 @@ var routes = require('./routes/api.js');
 
 app.use('/api', routes);
 app.use('/', function(req, res){
-    return res.send("Andromeda Backend Server v3");
+    return res.send("Andromeda Backend Server v4");
 })
-
 
 const MongoClient = require('mongodb').MongoClient;
 const uri = "mongodb+srv://admin:admin@andromeda-beta-1mxzv.mongodb.net/test?retryWrites=true";
@@ -33,7 +32,6 @@ mongoose.connect(uri, {useNewUrlParser: true, dbName: 'test_data'}, function(err
         throw error
     } console.log("Connection established")
 });
-
 
 var port = process.env.PORT || 3000;
     app.listen(port, function(){
