@@ -32,7 +32,7 @@ module.exports.getByNodeID = function(req, res){
 }
 
 
-// GET Sprayhead by DB ID - purely for testing purposes and not intended 
+// GET Sprayhead by DB ID - purely for testing purposes and not intended
 module.exports.getById = function(req, res){
     try{
         var spray = Sprayhead.findById(ObjectId(req.params.id)).exec();
