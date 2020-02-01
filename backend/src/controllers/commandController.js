@@ -7,7 +7,6 @@ var ObjectId = mongoose.Types.ObjectId;
 
 // GET available commands
 module.exports.getCommands = function(req, res){
-    // console.log("error here");
     Command.find({}, function(err, results){
         if (err){
             console.log(err);
@@ -15,13 +14,20 @@ module.exports.getCommands = function(req, res){
         }
         return res.json(results);
     });
-
-    /* For buffering */
-    /*
-    getLatestDevices
-
-    */
 };
+
+// GET staged commands (ie. not yet downloaded by hub)
+module.exports.getLatest = function(req, res){
+    Command.find({downloaded: false}, function(err, results){
+        if (err){
+            console.log(err);
+            return res.status(500).send(err);
+        }
+        return res.json(results);
+    });
+};
+
+
 
 module.exports.update = function(req, res){
     Command.update({"command_id": req.body.command_id},{$set: {"uploaded": req.body.uploaded}},

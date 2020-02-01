@@ -16,7 +16,8 @@ router.post('/sprayheads/', sprayheadController.add);
 
 // For commands
 router.get('/commands/', commandController.getCommands);
+router.get('/commands/staged', commandController.getStaged);
 router.post('/commands/', commandController.add);
 
-// Export 
+// Export
 module.exports = router;
