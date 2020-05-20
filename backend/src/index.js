@@ -24,7 +24,7 @@ app.use('/', function(req, res){
 })
 
 const MongoClient = require('mongodb').MongoClient;
-const uri = "mongodb+srv://admin:admin@andromeda-beta-1mxzv.mongodb.net/test?retryWrites=true";
+const uri = "";
 
 mongoose.connect(uri, {useNewUrlParser: true, dbName: 'test_data'}, function(error){
     if (error){
